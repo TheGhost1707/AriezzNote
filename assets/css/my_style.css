@@ -1,0 +1,196 @@
+.social-icon {
+    width: 30px;
+    /* Adjust the size as needed */
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.social-links a:hover .social-icon {
+    transform: scale(1.2);
+    /* Zoom effect on hover */
+}
+
+.header {
+    background-color: #59bdc1;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.nav-link {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.section {
+    padding: 60px 0;
+    min-height: 100vh;
+}
+
+.content-section {
+    background-color: #e9ecef;
+}
+
+.footer {
+    background-color: #59bdc1;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+.card {
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.card img {
+    height: 250px;
+    /* Atur tinggi gambar */
+    object-fit: cover;
+    /* Memastikan gambar tidak terdistorsi */
+    width: 100%;
+    /* Lebar gambar 100% sesuai container */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek saat kursor mengarah ke gambar */
+.card:hover img {
+    transform: scale(1.05);
+    /* Membuat gambar sedikit membesar */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    /* Menampilkan shadow di bawah gambar */
+    border-radius: 30px;
+}
+
+/* Efek shadow di bagian bawah */
+.card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-body p {
+    font-size: 20px;
+    font-family: 'Times New Roman', sans-serif;
+}
+
+.card-body h5 {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.col-md-8 p {
+    font-size: 20px;
+}
+
+.box-container {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.box-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-family: 'Arial', sans-serif;
+    color: #343a40;
+}
+
+h3 {
+    font-family: 'Times New Roman', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: green;
+}
+
+h2 {
+    font-family: 'Times New Roman', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+p {
+    font-family: 'Times New Roman', sans-serif;
+    font-size: 1.3rem;
+}
+
+/* Responsive Styling for Mobile Devices */
+@media (max-width: 768px) {
+    /* Adjust image size for smaller screens */
+    .col-md-4 img {
+        width: 100%;
+        /* Reduce image size on smaller screens */
+        border: 5px solid grey;
+        /* Adjust border size */
+    }
+
+    /* Center the follow button and follower count for small screens */
+    .col-md-4 .d-flex {
+        flex-direction: column-reverse;
+        /* Stack button and follower count vertically */
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    /* Adjust the follow button size for smaller screens */
+    .col-md-4 .btn {
+        width: 100%;
+        /* Make the button full width on mobile */
+        font-size: 18px;
+        /* Adjust button text size */
+        margin-top: 15px;
+    }
+
+    /* Adjust the follower count for smaller screens */
+    .col-md-4 #followers-count {
+        margin-top: 10px;
+        font-size: 20px;
+        /* Adjust font size */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand img {
+        width: 50px;
+        height: auto;
+    }
+
+    .navbar-brand {
+        font-size: 20px;
+    }
+
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+        /* Memberikan ruang pada navbar agar bisa merenggang */
+    }
+
+    .navbar-collapse {
+        justify-content: center;
+        /* Pastikan navigasi di-collapse juga berada di tengah */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 18px;
+        padding: 10px;
+        margin: 20px auto;
+        text-align: center;
+        /* Menambahkan sedikit jarak antar link */
+    }
+
+    .navbar-brand {
+        margin-right: auto;
+        /* Memastikan brand tetap berada di kiri */
+    }
+
+}
+
+/* Optional: Background gradient */
+#about {
+    background: linear-gradient(to right, #a7faee, #fff);
+    padding: 80px 0;
+}
+
+#content {
+    background: linear-gradient(to right, #fff, #a7faee);
+    padding: 80px 0;
+}
