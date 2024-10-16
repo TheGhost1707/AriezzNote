@@ -183,8 +183,8 @@ header("Pragma: no-cache");
             <?php endforeach; ?>
         </div>
     </div>
-   <!-- Footer -->
-   <footer class="footer text-light bg-dark p-4">
+    <!-- Footer -->
+    <footer class="footer text-light bg-dark p-4">
         <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
             <p class="mb-0">&copy; 2024 AriezzNote. All Rights Reserved.</p>
             <div class="social-links d-flex mt-3 mt-md-0">

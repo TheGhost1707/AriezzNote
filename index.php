@@ -45,6 +45,13 @@ if ($isLoggedIn) {
     <link rel="stylesheet" href="assets/css/my_style.css">
     <!-- Add this in the <head> section for Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMB0m7iIbq2E5Dg7F2H/oMx5NHX9W8IefxHc5F" crossorigin="anonymous">
+    <style>
+        @media (max-width: 768px) {
+            .navbar-brand {
+                font-size: 15px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -55,7 +62,7 @@ if ($isLoggedIn) {
                 <img src="assets/images/book.png" alt="Logo" style="width: 100px; height: auto; margin-right: 10px;">
                 AriezzNote <br>
                 <?php if (isset($_SESSION['full_name'])) : ?>
-                    <?= htmlspecialchars($_SESSION['full_name']); ?> (<?= htmlspecialchars($_SESSION['role']); ?>)
+                    <?= htmlspecialchars($_SESSION['full_name']); ?>
                 <?php endif; ?>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -94,7 +101,6 @@ if ($isLoggedIn) {
                             <?php else : ?>
                                 <!-- Tombol login jika belum login -->
                                 <button class="btn btn-success me-3" onclick="showLoginNotification()">Ikuti</button>
-
                                 <script>
                                     function showLoginNotification() {
                                         // Menampilkan notifikasi sebelum diarahkan ke halaman login
@@ -184,18 +190,30 @@ if ($isLoggedIn) {
             var followersCountElem = document.getElementById('followers-count');
             var currentCount = parseInt(followersCountElem.textContent);
 
-            // Simulasikan follow/unfollow
-            if (followBtn.classList.contains('btn-success')) {
-                followBtn.classList.remove('btn-success');
-                followBtn.classList.add('btn-secondary');
-                followBtn.textContent = 'Followed';
-                followersCountElem.textContent = currentCount + 1 + ' Followers';
-            } else {
-                followBtn.classList.remove('btn-secondary');
-                followBtn.classList.add('btn-success');
-                followBtn.textContent = 'Follow Me';
-                followersCountElem.textContent = currentCount - 1 + ' Followers';
-            }
+            // Menggunakan AJAX untuk mengirim permintaan follow/unfollow
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "follow.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText);
+
+                    if (response.status === 'followed') {
+                        followBtn.classList.remove('btn-success');
+                        followBtn.classList.add('btn-secondary');
+                        followBtn.textContent = 'Mengikuti';
+                        followersCountElem.textContent = (currentCount + 1) + ' Followers';
+                    } else if (response.status === 'unfollowed') {
+                        followBtn.classList.remove('btn-secondary');
+                        followBtn.classList.add('btn-success');
+                        followBtn.textContent = 'Ikuti';
+                        followersCountElem.textContent = (currentCount - 1) + ' Followers';
+                    }
+                }
+            };
+
+            xhr.send(); // Mengirim permintaan tanpa data tambahan
         });
     </script>
 </body>

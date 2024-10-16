@@ -128,6 +128,12 @@ if (!$novel) {
                 font-size: 16px;
             }
         }
+
+        @media (max-width: 768px) {
+            .navbar-brand {
+                font-size: 15px;
+            }
+        }
     </style>
     <!-- TinyMCE CDN -->
     <script src="https://cdn.tiny.cloud/1/1njh6m3u9qu67rqovhb6s4lt7fshs4vsgbejnlxs4qpggkvf/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>

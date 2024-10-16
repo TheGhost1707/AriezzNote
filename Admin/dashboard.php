@@ -31,6 +31,12 @@ header("Pragma: no-cache");
         body {
             background: linear-gradient(to right, #a7faee, #fff);
         }
+
+        @media (max-width: 768px) {
+            .navbar-brand {
+                font-size: 15px;
+            }
+        }
     </style>
 </head>
 
@@ -79,7 +85,7 @@ header("Pragma: no-cache");
     </section>
 
     <!-- Footer -->
-   <footer class="footer text-light bg-dark p-4">
+    <footer class="footer text-light bg-dark p-4">
         <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
             <p class="mb-0">&copy; 2024 AriezzNote. All Rights Reserved.</p>
             <div class="social-links d-flex mt-3 mt-md-0">
