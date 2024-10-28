@@ -45,7 +45,7 @@ header("Pragma: no-cache");
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="#" style="font-weight:bold; font-size:25px;">
-                <img src="../assets/images/book.png" alt="Logo" style="width: 100px; height: auto; margin-right: 10px;">
+                <img src="../assets/images/Book.jpeg" alt="Logo" style="width: 60px; height: auto; margin-right: 10px;">
                 AriezzNote <br> <?= $_SESSION['full_name']; ?> (<?= $_SESSION['role']; ?>)
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

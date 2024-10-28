@@ -154,7 +154,7 @@ if (!$novel) {
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-left" href="#" style="font-weight:bold;">
-                <img src="../../assets/images/book.png" alt="Logo" style="width: 100px; height: auto; margin-right: 10px;">
+                <img src="../../assets/images/Book.jpeg" alt="Logo" style="width: 60px; height: auto; margin-right: 10px;">
                 AriezzNote <br>
                 <?php if (isset($_SESSION['full_name'])) : ?>
                     <?= htmlspecialchars($_SESSION['full_name']); ?> (<?= htmlspecialchars($_SESSION['role']); ?>)

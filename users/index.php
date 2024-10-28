@@ -35,7 +35,7 @@
         }
 
         .app-logo {
-            width: 200px;
+            width: 100px;
         }
 
         .form-control {
@@ -105,7 +105,7 @@
     ?>
     <div class="container">
         <div class="login-box">
-            <img src="../assets/images/book.png" alt="Logo" class="app-logo">
+            <img src="../assets/images/Book.jpeg" alt="Logo" class="app-logo">
             <h1 style="margin:20px;">AriezzNote</h1>
 
             <!-- Login form -->

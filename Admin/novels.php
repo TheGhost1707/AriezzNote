@@ -150,7 +150,7 @@ $novels = $novelResult->fetchAll(PDO::FETCH_ASSOC);
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="#" style="font-weight:bold;">
-                <img src="../assets/images/book.png" alt="Logo" style="width: 100px; height: auto; margin-right: 10px;">
+                <img src="../assets/images/Book.jpeg" alt="Logo" style="width: 60px; height: auto; margin-right: 10px;">
                 AriezzNote <br> <?= $_SESSION['full_name']; ?> (<?= $_SESSION['role']; ?>)
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -284,7 +284,7 @@ $novels = $novelResult->fetchAll(PDO::FETCH_ASSOC);
     </div>
     </div>
     <!-- Footer -->
-   <footer class="footer text-light bg-dark p-4">
+    <footer class="footer text-light bg-dark p-4">
         <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
             <p class="mb-0">&copy; 2024 AriezzNote. All Rights Reserved.</p>
             <div class="social-links d-flex mt-3 mt-md-0">
